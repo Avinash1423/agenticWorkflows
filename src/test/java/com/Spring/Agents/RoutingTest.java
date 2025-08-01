@@ -21,6 +21,7 @@ class RoutingTest {
     @Mock
     ChatClient.ChatClientRequestSpec requestSpec;
 
+
     @Mock
     ChatClient.CallResponseSpec responseSpec;
 
@@ -92,8 +93,6 @@ class RoutingTest {
 
         Routing routingSpy =spy(new Routing(chatClient));
         doReturn("billing").when(routingSpy).determineRoute(anyString(),any());
-
-
 
 
       when(chatClient.prompt(contains("Billing Support Response"))).thenReturn(requestSpec);
